@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">{% csrf_token %}
+        <table>
+            <tr>
+                <th><label>Full Name</label></th>
+                <td><input type="text" name="fname"></td>
+            </tr><br><br>
+            <tr>
+                <th><label>State</label></th>
+                <td><select name="state" >
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+                </td>
+            </tr>
+            <br><br>
+            <tr>
+                <th>Language</th>
+                <td><input type="checkbox" name="ch1">Tamil
+                <input type="checkbox" name="ch2">Malayalam
+                <input type="checkbox" name="ch3">English</td>
+            </tr><br>
+            <tr>
+                <th></th>
+                <td><center><b><input type="submit" class="button" value="Submit"></b></center></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

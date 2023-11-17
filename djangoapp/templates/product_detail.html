@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+    .container{
+        background-color:none;
+        margin-top:80px;
+        }
+        label{
+        margin-left:40px;
+        float:left;
+        font-size:12px;
+        }
+
+        .button{
+        background-color:#9999ff;
+        border-radius: 10px;
+        text-align: center;
+        padding: 3px 35px;
+        font-size:20px;
+        }
+        .container .button:hover {
+        background-color: black;
+        color: white;
+        }
+        body{
+        background-image:url({% static 'img_11.png' %});
+        background-repeat:no-repeat;
+        background-size: 100% 850px;
+        }
+        h3{
+        color:yellow;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="container w-50 height='600px'">
+        <form method="post" action="">{% csrf_token %}
+            <center>
+                <h3><i><b>Product Detail </b></i></h3><br>
+                <label>Product Name</label>
+                <input type="text" name="pname" placeholder="Enter Product Name" style="float:right;margin-right:200px"><br><br>
+                <label>Price</label>
+                <input type="text" name="price" placeholder="Enter Price" style="float:right;margin-right:200px"><br><br>
+                <label>Company Name</label>
+                <input type="text" name="cname" placeholder="Enter Company Name" style="float:right;margin-right:200px"><br><br>
+                <label>Quantity</label>
+                <input type="text" name="quan" placeholder="Enter Quantity" style="float:right;margin-right:200px"><br><br>
+                <label>Expiry Date</label>
+                <input type="date" name="exp" placeholder="Enter Expiry Date"  style="float:right;margin-right:250px"><br><br>
+                <label>Description</label>
+                <textarea name="description" rows="3" cols="43" style="margin-right:-180px"></textarea><br><br>
+
+                <center><b><input type="submit" class="buttton" value="Submit"></b></center>
+            </center>
+
+        </form>
+    </div>
+
+</body>
+</html>

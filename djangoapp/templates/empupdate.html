@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container w-25">
+  <form method="post" action="">{% csrf_token %}
+      <center>
+      <h3><i>Registration Form</i></h3></center><br>
+      <label for="ename"><b>Employee Name:</b></label><br>
+      <input type="text" id="ename" name="ename" value="{{data1.emp_name}}" placeholder="Enter Employee's Name" size="40"><br><br>
+      <label for="m"><b>Email id</b></label><br>
+      <input type="email" id="m" name="email" value="{{data1.mail}}" placeholder="Enter Email id" size="40"><br><br>
+      <label for="cn"><b>Company Name</b></label><br>
+      <input type="text" id="cn" name="cmp" placeholder="Enter Company Name" size="40" value="{{data1.cmpnm}}"><br><br>
+      <label for="des"><b>Designation</b></label><br>
+      <input type="text" id="des" name="desc" placeholder="Enter Designation" size="40" value="{{data1.des}}"><br><br>
+      <label for="phn"><b>Phone Number</b></label><br>
+      <input type="text" id="phn" name="mob" placeholder="Enter Phone Number" size="40" value="{{data1.phone}}"><br><br>
+      <center><b><input type="submit" class="button" value="Update"></b></center><br>
+
+
+  </form>
+    </div>
+</body>
+</html>

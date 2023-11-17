@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <style>
+    .container{
+    margin-top:100px;
+    padding-bottom:50px;
+    background-color:#f5f5ef;
+    }
+    label{
+    float:left;
+    }
+
+     body{
+        background-image:url({% static 'img_2.png' %});
+        background-repeat: no-repeat;
+        background-size: 100% 850px;
+        }
+
+         h3{
+         padding-top:30px;
+  }
+  #button{
+    paddind-top:30px;
+
+    }
+
+  </style>
+    <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+<center>
+  <div class="container w-50">
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+      <h3><i><b>Files Upload</b></i></h3><br><br>
+      <table>
+        <tr>
+          <th><label>Audio Name</label></th>
+          <td><input type="text" name="aname" placeholder="Enter Audio Name" size="35"></td>
+        </tr>
+
+        <tr>
+          <th><label>Audio</label></th>
+          <td><input class="form-control form-control-sm" id="formFileSm" type="file" name="af"/></td>
+        </tr>
+
+        <tr>
+          <th><label>Vedio Name</label></th>
+          <td><input type="text" name="vname" placeholder="Enter Vedio Name" size="35"></td>
+        </tr>
+        <tr>
+          <th><label>Vedio</label></th>
+          <td><input class="form-control form-control-sm" id="formFileSm" type="file" name="vf"/></td>
+        </tr>
+        <tr>
+          <th><label>PDF Name</label></th>
+          <td><input type="text" name="pdfname" placeholder="Enter PDF Name" size="35"></td>
+        </tr>
+        <tr>
+          <th><label>PDF</label></th>
+          <td><input class="form-control form-control-sm" id="formFileSm" type="file" name="pdf"/></td>
+        </tr>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        <tr><th></th></tr>
+        <tr>
+          <th></th>
+          <td><center><b><input type="submit" class="button" value="Upload"></b></center></td>
+        </tr>
+      </table>
+
+    </form>
+  </div>
+  </center>
+
+
+</body>
+</html>

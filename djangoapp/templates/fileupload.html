@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+        label{
+        float:left;
+        color:white;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <div class="container w-50"
+         style="margin-top:200px;background-image:url({% static 'img_5.png' %});background-repeat: no-repeat;background-size: 100% 300px;padding-top:40px;padding-bottom:40px;">
+        <div class="x">
+            <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                <label>File Name</label>
+                <input type="text" name="fname"><br><br>
+                <label>File Image</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="file" id="myFile" name="filename"><br><br>
+
+                <label>Description</label>
+                <input type="text" name="desc"><br><br>
+                <input type="submit">
+          </form>
+        </div>
+  </div>
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>This is my first Template</h1>
+<p>This is my first paragraph</p>
+<img src="{% static 'nat.jpg' %}" height="200px" width="200px"><br>
+<br>
+
+<a href="{% static 'function_prgrm_qest.pdf' %}"download>Programlist</a><br><br>
+
+<audio controls>
+<source src="{% static 'audio.mp3' %}">
+</audio><br><br>
+
+<video controls height="200px" width="200px"><source src="{% static 'wt.mp4'%}">
+
+</video>
+<a href="sample-0.mp3" download>click to download audio file</a>
+
+
+</body>
+</html>
